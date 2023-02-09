@@ -12,6 +12,7 @@ const todoRoutes = require("./routes/todoRoutes");
 const connectionOptions = { useUnifiedTopology: true, useNewUrlParser: true };
 // Usar JSON para parsear el cuerpo de la solicitud
 app.use(express.json());
+app.use(cors());
 
 mongoose
   .connect(

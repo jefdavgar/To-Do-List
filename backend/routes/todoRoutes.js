@@ -28,9 +28,8 @@ router.put("/:id", (req, res) => {
 
 // Manejador de petición DELETE en la ruta con un parámetro ('/:id')
 router.delete("/:id", (req, res) => {
-  Todo.findOneAndRemove({ _id: req.params.id }, (err, result) => { // buscamos el documento en la colección Todo con el id especificado y lo eliminamos
-    if(err) throw new Error(err); // si hay un error, lo lanzamos
-    res.end(); // enviamos una respuesta vacía
+  Todo.findOneAndRemove({ _id: req.params.id }, (err, result) => {
+      res.end();
   });
 });
 

@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 const cors = require("cors");
-const port = 3030;
 const app = express();
 
 // Importar rutas Todo
@@ -22,6 +21,5 @@ mongoose
   .then(() => console.log("Connected successfully"))
   .catch((err) => console.error(err));
 app.use("/todos", todoRoutes);
-app.listen(port, () => {
-  console.log("This server is listening on port: " + port);
-});
+
+module.exports = app;

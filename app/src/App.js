@@ -3,8 +3,12 @@ import Form from "./Components/Form";
 import List from "./Components/List";
 import Section from "./Components/Section";
 import todos from "./api/index";
+import Avatar from './assets/Avatar.png'
 
-const AppTitle = "To-Do-App";
+
+const AppTitle = "To Do a List";
+const AppMessage = "Hello Lina!";
+const AppMessagge2 = "What are we going to do today?"
 
 export const App = () => {
   const [todoList, setTodoList] = useState([]);
@@ -35,7 +39,10 @@ export const App = () => {
   return (
     <div className="ui container center aligned">
       <Section>
-        <h1>{AppTitle}</h1>
+        <h1 id="Title">{AppTitle}</h1>
+        <img id='Avatar'src={Avatar}/>
+        <p id="Text">{AppMessage}</p>
+        <p id="Text2">{AppMessagge2}</p>
       </Section>
       <Section>
         <Form addTodo={addTodo} />

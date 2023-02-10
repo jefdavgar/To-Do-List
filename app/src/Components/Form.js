@@ -14,20 +14,21 @@ function Form({ addTodo }) {
     setInputValue("");
   };
   return (
-    <form className="ui form" onSubmit={handleFormSubmit}>
+    <form  className="ui form" onSubmit={handleFormSubmit}>
       <div className="ui grid center aligned">
         <div className="row">
-          <div className="column five wide">
+          <div className="column eleven wide">
             <input
               value={inputValue}
               onChange={handleInputChange}
               type="text"
-              placeholder="Enter something to do..."
+              placeholder="Write your task here"
+              id='Input'
             />
           </div>
 
           <div className="column one wide">
-            <button type="submit" className="ui button circular icon green">
+            <button id='plus' type="submit" className="ui button circular icon yellow">
               <i className="white plus icon"></i>
             </button>
           </div>

@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
 // Manejador de petición PUT en la ruta con un parámetro ('/:id')
 router.put("/:id", (req, res) => {
   Todo.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, result) => { // buscamos el documento en la colección Todo con el id especificado y lo actualizamos con los datos en el cuerpo de la petición
-    if(err) throw new Error(err); // si hay un error, lo lanzamos
+   // si hay un error, lo lanzamos
     res.json(result); // enviamos la respuesta en formato JSON con el documento actualizado
   });
 });
@@ -29,13 +29,8 @@ router.put("/:id", (req, res) => {
 // Manejador de petición DELETE en la ruta con un parámetro ('/:id')
 router.delete("/:id", (req, res) => {
   Todo.findOneAndRemove({ _id: req.params.id }, (err, result) => {
-    if(err) {
-      res.status(500).send(err);
-    } else {
-      res.status(200).send("Item eliminado correctamente");
-    }
+      res.end();
   });
 });
-
 
 module.exports = router; // exportamos el enrutador para ser utilizado en otro archivo

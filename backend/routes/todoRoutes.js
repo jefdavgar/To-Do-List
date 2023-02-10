@@ -29,8 +29,13 @@ router.put("/:id", (req, res) => {
 // Manejador de petición DELETE en la ruta con un parámetro ('/:id')
 router.delete("/:id", (req, res) => {
   Todo.findOneAndRemove({ _id: req.params.id }, (err, result) => {
-      res.end();
+    if(err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).send("Item eliminado correctamente");
+    }
   });
 });
+
 
 module.exports = router; // exportamos el enrutador para ser utilizado en otro archivo

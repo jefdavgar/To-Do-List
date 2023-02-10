@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap');
+
+body {
+    font-family: 'Josefin Slab', serif !important;
+    background-color: black !important;
+    color: #FFFEFD !important;
+}
+
+#Avatar {
+    width: 40%;
+}
+
+#Title, #Text, h2 {
+    font-family: 'Josefin Slab', serif !important;
+}
+#Title {
+    font-size: 40px;
+}
+#Text {
+    font-size: 20px;
+}
+
+#Text2 {
+    font-size: 18px;
+   
+}
+
+h2 {
+    color: #FFFEFD !important;
+    font-size: 20px !important;
+}
+
+#Input {
+    background-color: transparent;
+    border: solid 2px #FEBE00;
+    border-radius: 20px;
+    color: #FFFEFD !important; 
+}
+
+.ui.button.circular.icon {
+    gap: 5px;
+}
+
+
+@media (min-width: 1200px){
+    #Avatar {
+        width: 20vh;
+
+    }
+
+    #Text {
+        font-size: 30px;
+    }
+    
+    #Text2 {
+        font-size: 25px;
+    }
+}
+
+
+
+
+
+
+
